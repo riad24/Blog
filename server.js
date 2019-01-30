@@ -9,7 +9,6 @@ app.use(function(req, res, next) {
     next();
 });
 
-
 app.listen(5000);
 console.log("server running on port 5000");
 
