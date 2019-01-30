@@ -40,7 +40,6 @@ app.controller('detailsPostController', ['$scope', '$state', '$stateParams', 'ap
         
 
         var id = $stateParams.id;
-        console.log(id);
         apiHandler.getdetailsPost(id).then(function (success) {
             $scope.Posts = success;
             console.log( $scope.Posts);

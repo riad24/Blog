@@ -16,7 +16,7 @@ app.controller('categoryController', ['$scope','$state','$stateParams','apiHandl
      *
      */
     $scope.Posts = $stateParams.catPosts;
-    console.log($scope.Posts)
+    console.log($scope.Posts);
 
     var id = $stateParams.id;
     console.log(id);
