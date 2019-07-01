@@ -1,4 +1,4 @@
-/// require the express module in server.js =============================
+/// require the express module in server.js =============================>
 var express = require('express');
 var app = express();
 
@@ -10,6 +10,8 @@ app.use(function(req, res, next) {
 });
 
 app.listen(5000);
+
 console.log("server running on port 5000");
+/// end ============================================================>
 
 
