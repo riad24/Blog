@@ -1,11 +1,14 @@
+
+
+
+
+
 /**
  * Created by riad mahmud on 1/27/2017.
  */
 
 app.controller('postController', ['$scope', '$state', '$stateParams', 'apiHandler','singletonVars',
     function ($scope, $state, $stateParams, apiHandler,singletonVars) {
-
-
         $scope.searchPost = function (post) {
             console.log(post);
             apiHandler.getsearchpost(post).then(function (success) {
@@ -16,11 +19,10 @@ app.controller('postController', ['$scope', '$state', '$stateParams', 'apiHandle
             }, function (error) {
                 console.log(error)
             });
-
         };
 
         /**
-         * get all Post
+         * get all Post==========================================================>
          */
         apiHandler.getPost().then(function (posts) {
             $scope.AllPosts = posts.data;
@@ -28,7 +30,7 @@ app.controller('postController', ['$scope', '$state', '$stateParams', 'apiHandle
         });
 
         /**
-         * get all Post count
+         * get all Post count=================================================>
          */
         apiHandler.GetPostcount().then(function (success) {
             console.log(success);
@@ -38,7 +40,7 @@ app.controller('postController', ['$scope', '$state', '$stateParams', 'apiHandle
         });
 
         /**
-         * get all Category count
+         * get all Category count=============================================================>
          */
         apiHandler.GetCategorycount().then(function (success) {
             console.log(success);
@@ -47,9 +49,6 @@ app.controller('postController', ['$scope', '$state', '$stateParams', 'apiHandle
             console.log(error)
         });
         
-        
-        
-
         var id = $stateParams.id;
         console.log("jshcfksdhdjjsd");
         console.log(id);
@@ -58,10 +57,8 @@ app.controller('postController', ['$scope', '$state', '$stateParams', 'apiHandle
             console.log( $scope.Posts);
             });
 
-
-
         /**
-         * text truncate
+         * text truncate =========================================================>
          */
         $scope.text_truncate = function(str, length, ending) {
             if (length == null) {
@@ -76,6 +73,4 @@ app.controller('postController', ['$scope', '$state', '$stateParams', 'apiHandle
                 return str;
             }
         };
-
-
     }]);
